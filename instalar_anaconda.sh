@@ -9,7 +9,8 @@ source ~/.bashrc
 conda env create --name entornoIA2425 --file=entornoIA2425_MAC.yml
 conda activate entornoIA2425
 #jupyter notebook --generate-config
-sed -i "s/# c.NotebookApp.notebook_dir = ''/ c.NotebookApp.notebook_dir = '\/home\/eps'/g" /home/eps/.jupyter/jupyter_notebook_config.py
+#sed -i "s/# c.NotebookApp.notebook_dir = ''/ c.NotebookApp.notebook_dir = '\/home\/eps'/g" /home/eps/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.notebook_dir = '/home/eps' >> /home/eps/.jupyter/jupyter_notebook_config.py
 conda install anaconda-navigator -y
 #conda config --set auto_activate_base false
 
